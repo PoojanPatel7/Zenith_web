@@ -557,7 +557,7 @@
                     <div class="portfolio-img">
                         <img src="images/web/home3.jpeg" alt="Cinematic Travel Video">
                         <div class="portfolio-overlay">
-                            <a href="#" class="portfolio-video-btn" onclick="alert('Coming Soon!'); return false;"><i class="fas fa-play"></i></a>
+                            <a href="#" class="portfolio-video-btn" onclick="showComingSoon(event)"><i class="fas fa-play"></i></a>
                         </div>
                     </div>
                     <div class="portfolio-info">
@@ -571,7 +571,7 @@
                     <div class="portfolio-img">
                         <img src="images/web/22.jpeg" alt="Social Media Promo">
                         <div class="portfolio-overlay">
-                            <a href="#" class="portfolio-video-btn" onclick="alert('Coming Soon!'); return false;"><i class="fas fa-play"></i></a>
+                            <a href="#" class="portfolio-video-btn" onclick="showComingSoon(event)"><i class="fas fa-play"></i></a>
                         </div>
                     </div>
                     <div class="portfolio-info">
@@ -775,6 +775,17 @@
             <p>&copy; 2026 Zenith. All rights reserved. | Designed with <i class="fas fa-heart" style="color: #e53e3e;"></i> by Zenith Team</p>
         </div>
     </footer>
+
+    <!-- Custom Coming Soon Popup -->
+    <div id="coming-soon-popup" class="custom-popup">
+        <div class="popup-content">
+            <div class="oops-icon">
+                <i class="fas fa-exclamation-circle"></i>
+            </div>
+            <h3>Oops!</h3>
+            <p>Coming Soon!</p>
+        </div>
+    </div>
 
     <!-- Scroll to Top Button -->
     <button id="scroll-top" class="scroll-top-btn">

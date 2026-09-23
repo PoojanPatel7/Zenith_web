@@ -224,3 +224,17 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 });
+
+// Global function for Coming Soon popup
+window.showComingSoon = function(event) {
+    event.preventDefault();
+    const popup = document.getElementById('coming-soon-popup');
+    if (popup) {
+        popup.classList.add('active');
+        
+        // Auto close after 1 second (1000ms)
+        setTimeout(() => {
+            popup.classList.remove('active');
+        }, 1000);
+    }
+};
