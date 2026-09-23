@@ -1482,25 +1482,19 @@ footer {
     }
     .process-grid { grid-template-columns: repeat(2, 1fr); }
     .process-step::after { display: none; }
-    .tech-grid { grid-template-columns: repeat(4, 1fr); }
+    .tech-grid { grid-template-columns: repeat(3, 1fr); }
     .vision-card { grid-template-columns: 1fr; gap: 40px; text-align: center; }
-    .vision-visual { order: -1; } /* move ring to top on mobile */
+    .vision-visual { order: -1; }
     .vision-stats { justify-content: center; }
     .about-grid { grid-template-columns: 1fr; gap: 40px; }
     .footer-content { grid-template-columns: 1fr 1fr; }
     
-    .testimonials-modern-grid {
-        grid-template-columns: 1fr;
-    }
-    .testi-card.featured-testi {
-        transform: scale(1);
-    }
-    .testi-card.featured-testi:hover {
-        transform: translateY(-8px);
-    }
+    .portfolio-grid { grid-template-columns: repeat(2, 1fr); }
+    .contact-wrapper { grid-template-columns: 1fr; gap: 30px; }
 }
 
 @media (max-width: 768px) {
+    .section-padding { padding: 60px 0; }
     .nav-links {
         display: none;
         flex-direction: column;
@@ -1514,43 +1508,50 @@ footer {
         box-shadow: 0 10px 15px rgba(0,0,0,0.05);
         gap: 20px;
     }
-
     .nav-links.active {
         display: flex;
     }
-
     .hamburger {
         display: block;
     }
-
     .hero {
         background-position: 65% center;
     }
+    .hero-content-overlay h1 { font-size: 2.5rem; }
     
     .services-grid {
         grid-template-columns: 1fr;
     }
     .process-grid { grid-template-columns: 1fr; }
     .tech-grid { grid-template-columns: repeat(2, 1fr); }
-    .testimonials-modern-grid { gap: 20px; }
     .vision-card { padding: 40px 20px; }
     .vision-stats { flex-wrap: wrap; justify-content: center; gap: 20px; }
     .stat-divider { display: none; }
     
     .section-title h2 { font-size: 2.2rem; }
     .section-title p { font-size: 1rem; padding: 0 10px; }
-    .mega-title { font-size: 2.4rem !important; }
+    .mega-title { font-size: 2.2rem !important; }
     .mega-subtitle { font-size: 1.05rem !important; padding: 0 15px; }
     .section-badge { font-size: 0.75rem; padding: 5px 12px; }
     
     .footer-content { grid-template-columns: 1fr; gap: 30px; }
-    .cta-card { padding: 50px 20px; }
-    .cta-content h2 { font-size: 2.2rem; }
-    .cta-content p { font-size: 1.1rem; }
-    .cta-buttons { flex-direction: column; align-items: stretch; }
-    .cta-buttons a { text-align: center; }
     
     .portfolio-grid { grid-template-columns: 1fr; }
+    .portfolio-filters { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; margin-bottom: 30px; }
+    .portfolio-filters .filter-btn { margin: 0; }
+    
     .contact-wrapper { grid-template-columns: 1fr; }
     .form-row { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 480px) {
+    .tech-grid { grid-template-columns: 1fr; }
+    .hero-content-overlay h1 { font-size: 2rem; }
+    .hero-content-overlay p { font-size: 1rem; }
+    .about-text h2 { font-size: 2rem; }
+    .vision-content h2 { font-size: 2rem; }
+    .vision-stats { flex-direction: column; align-items: center; gap: 15px; }
+    .stat-item { align-items: center; }
+    .contact-info { padding: 25px; }
+    .contact-form-container { padding: 25px; }
 }
