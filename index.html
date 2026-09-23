@@ -506,61 +506,77 @@
         </div>
     </section>
 
-    <!-- Testimonials Section -->
-    <section class="testimonials-modern section-padding bg-light">
+    <!-- Portfolio / Demo Work Section -->
+    <section id="portfolio" class="portfolio-section section-padding bg-light">
         <div class="container">
             <div class="section-title text-center">
-                <span class="section-badge">CLIENT SUCCESS</span>
-                <h2>What Our Clients Say</h2>
-                <p>Real feedback from real businesses we've helped.</p>
+                <span class="section-badge">OUR PORTFOLIO</span>
+                <h2>Our Demo Work</h2>
+                <p>Explore our latest web development projects and cinematic video edits.</p>
             </div>
             
-            <div class="testimonials-modern-grid">
-                <!-- Card 1 -->
-                <div class="testi-card fade-in">
-                    <i class="fas fa-quote-left quote-icon"></i>
-                    <p class="testi-text">"Zenith delivered our website faster than we expected. The design was stunning and our customers love the new experience. Highly recommended!"</p>
-                    <div class="testi-footer">
-                        <img src="https://ui-avatars.com/api/?name=Rahul+Sharma&background=1E78FF&color=fff" alt="Rahul Sharma">
-                        <div class="testi-info">
-                            <h4>Rahul Sharma</h4>
-                            <span>Founder, TechStart India</span>
+            <!-- Portfolio Filters -->
+            <div class="portfolio-filters text-center">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="web">Websites</button>
+                <button class="filter-btn" data-filter="video">Videos</button>
+            </div>
+
+            <!-- Portfolio Grid -->
+            <div class="portfolio-grid">
+                <!-- Web Project 1 -->
+                <div class="portfolio-item web fade-in">
+                    <div class="portfolio-img">
+                        <img src="images/web/home.jpeg" alt="E-Commerce Website">
+                        <div class="portfolio-overlay">
+                            <a href="#" class="portfolio-link"><i class="fas fa-link"></i></a>
                         </div>
                     </div>
-                    <div class="testi-rating">
-                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    <div class="portfolio-info">
+                        <h3>E-Commerce Platform</h3>
+                        <span>Web Development</span>
                     </div>
                 </div>
-                
-                <!-- Card 2 (Elevated) -->
-                <div class="testi-card featured-testi fade-in">
-                    <i class="fas fa-quote-left quote-icon"></i>
-                    <p class="testi-text">"The video editing work was top-notch. They understood our brand perfectly and delivered content that boosted our social media engagement by 200%."</p>
-                    <div class="testi-footer">
-                        <img src="https://ui-avatars.com/api/?name=Priya+Patel&background=F56565&color=fff" alt="Priya Patel">
-                        <div class="testi-info">
-                            <h4>Priya Patel</h4>
-                            <span>CEO, CreativeHub</span>
+
+                <!-- Web Project 2 -->
+                <div class="portfolio-item web fade-in">
+                    <div class="portfolio-img">
+                        <img src="images/web/home2.jpeg" alt="Corporate Website">
+                        <div class="portfolio-overlay">
+                            <a href="#" class="portfolio-link"><i class="fas fa-link"></i></a>
                         </div>
                     </div>
-                    <div class="testi-rating">
-                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    <div class="portfolio-info">
+                        <h3>Corporate Portal</h3>
+                        <span>Web Development</span>
                     </div>
                 </div>
-                
-                <!-- Card 3 -->
-                <div class="testi-card fade-in">
-                    <i class="fas fa-quote-left quote-icon"></i>
-                    <p class="testi-text">"Professional, responsive, and incredibly talented. Zenith transformed our outdated website into a modern platform that generates real leads."</p>
-                    <div class="testi-footer">
-                        <img src="https://ui-avatars.com/api/?name=Arjun+Mehta&background=48BB78&color=fff" alt="Arjun Mehta">
-                        <div class="testi-info">
-                            <h4>Arjun Mehta</h4>
-                            <span>Director, BuildSmart</span>
+
+                <!-- Video Project 1 -->
+                <div class="portfolio-item video fade-in">
+                    <div class="portfolio-img">
+                        <img src="images/web/home3.jpeg" alt="Cinematic Travel Video">
+                        <div class="portfolio-overlay">
+                            <a href="#" class="portfolio-video-btn"><i class="fas fa-play"></i></a>
                         </div>
                     </div>
-                    <div class="testi-rating">
-                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    <div class="portfolio-info">
+                        <h3>Brand Commercial</h3>
+                        <span>Video Editing</span>
+                    </div>
+                </div>
+
+                <!-- Video Project 2 -->
+                <div class="portfolio-item video fade-in">
+                    <div class="portfolio-img">
+                        <img src="images/web/22.jpeg" alt="Social Media Promo">
+                        <div class="portfolio-overlay">
+                            <a href="#" class="portfolio-video-btn"><i class="fas fa-play"></i></a>
+                        </div>
+                    </div>
+                    <div class="portfolio-info">
+                        <h3>Social Media Promo</h3>
+                        <span>Video Editing</span>
                     </div>
                 </div>
             </div>
@@ -649,18 +665,71 @@
         </div>
     </section>
 
-    <!-- Call to Action / Contact -->
-    <section id="contact" class="cta-modern section-padding">
+    <!-- Contact Us Section -->
+    <section id="contact" class="contact-section section-padding">
         <div class="container">
-            <div class="cta-card fade-in">
-                <div class="cta-pattern"></div>
-                <div class="cta-content">
-                    <h2>Ready to start your next big project?</h2>
-                    <p>Let's collaborate and build something amazing together. Transform your digital presence today.</p>
-                    <div class="cta-buttons">
-                        <a href="mailto:hello@zenithtech.com" class="btn-primary btn-large">Contact Us Today <i class="fas fa-arrow-right"></i></a>
-                        <a href="https://wa.me/1234567890" class="btn-whatsapp btn-large" target="_blank"><i class="fab fa-whatsapp"></i> Chat on WhatsApp</a>
+            <div class="section-title text-center">
+                <span class="section-badge">GET IN TOUCH</span>
+                <h2>Contact Us</h2>
+                <p>Let's collaborate and build something amazing together. Reach out to us today.</p>
+            </div>
+
+            <div class="contact-wrapper">
+                <div class="contact-info fade-in">
+                    <div class="contact-info-item">
+                        <div class="icon-box"><i class="fas fa-map-marker-alt"></i></div>
+                        <div>
+                            <h4>Location</h4>
+                            <p>Global Digital Agency</p>
+                        </div>
                     </div>
+                    <div class="contact-info-item">
+                        <div class="icon-box"><i class="fas fa-envelope"></i></div>
+                        <div>
+                            <h4>Email Us</h4>
+                            <p>zeniithdigitalworks@gmail.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-info-item">
+                        <div class="icon-box"><i class="fas fa-phone-alt"></i></div>
+                        <div>
+                            <h4>Call / WhatsApp</h4>
+                            <p>+91 12345 67890</p>
+                        </div>
+                    </div>
+                    <div class="contact-social">
+                        <h4>Follow Us</h4>
+                        <div class="social-icons">
+                            <a href="https://www.instagram.com/zeniithdigitalworks/?hl=en" target="_blank"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-linkedin"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-form-container fade-in">
+                    <form id="contactForm" class="contact-form" action="https://formspree.io/f/xyyllqke" method="POST">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="name">Your Name</label>
+                                <input type="text" id="name" name="name" placeholder="John Doe" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Your Email</label>
+                                <input type="email" id="email" name="email" placeholder="john@example.com" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <input type="text" id="subject" name="subject" placeholder="Project Inquiry" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Your Message</label>
+                            <textarea id="message" name="message" rows="5" placeholder="Tell us about your project..." required></textarea>
+                        </div>
+                        <button type="submit" class="btn-primary btn-submit">Send Message <i class="fas fa-paper-plane"></i></button>
+                    </form>
+                    <div id="formMessage" class="form-message" style="display: none; margin-top: 15px; padding: 10px; border-radius: 5px; text-align: center; font-weight: bold;"></div>
                 </div>
             </div>
         </div>

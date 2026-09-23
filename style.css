@@ -1286,6 +1286,190 @@ footer {
     font-size: 1rem;
 }
 
+/* Portfolio Section */
+.portfolio-filters {
+    margin-bottom: 40px;
+}
+.portfolio-filters .filter-btn {
+    background: transparent;
+    border: none;
+    padding: 8px 20px;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--secondary-color);
+    cursor: pointer;
+    transition: var(--transition);
+    border-radius: 30px;
+    margin: 0 5px;
+}
+.portfolio-filters .filter-btn.active, .portfolio-filters .filter-btn:hover {
+    background: var(--primary-color);
+    color: #fff;
+    box-shadow: 0 4px 10px rgba(30, 120, 255, 0.2);
+}
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+.portfolio-item {
+    background: #fff;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    transition: var(--transition);
+}
+.portfolio-item:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+}
+.portfolio-img {
+    position: relative;
+    overflow: hidden;
+    aspect-ratio: 16/9;
+}
+.portfolio-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+.portfolio-item:hover .portfolio-img img {
+    transform: scale(1.05);
+}
+.portfolio-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(10, 37, 64, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: var(--transition);
+}
+.portfolio-item:hover .portfolio-overlay {
+    opacity: 1;
+}
+.portfolio-link, .portfolio-video-btn {
+    width: 60px;
+    height: 60px;
+    background: var(--primary-color);
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    transform: translateY(20px);
+    transition: transform 0.4s ease, background 0.3s ease;
+}
+.portfolio-item:hover .portfolio-link, .portfolio-item:hover .portfolio-video-btn {
+    transform: translateY(0);
+}
+.portfolio-link:hover, .portfolio-video-btn:hover {
+    background: #fff;
+    color: var(--primary-color);
+}
+.portfolio-info {
+    padding: 25px;
+}
+.portfolio-info h3 {
+    font-size: 1.25rem;
+    margin-bottom: 5px;
+}
+.portfolio-info span {
+    color: var(--primary-color);
+    font-size: 0.95rem;
+    font-weight: 600;
+}
+
+/* Contact Section */
+.contact-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 50px;
+    margin-top: 50px;
+}
+.contact-info {
+    background: linear-gradient(135deg, #0A2540 0%, #1E78FF 100%);
+    border-radius: 20px;
+    padding: 40px;
+    color: #fff;
+    box-shadow: 0 15px 35px rgba(30, 120, 255, 0.2);
+}
+.contact-info-item {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+.contact-info-item .icon-box {
+    width: 50px;
+    height: 50px;
+    background: rgba(255,255,255,0.1);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.25rem;
+}
+.contact-info-item h4 {
+    color: #fff;
+    margin-bottom: 5px;
+}
+.contact-info-item p {
+    color: rgba(255,255,255,0.8);
+}
+.contact-social h4 {
+    color: #fff;
+    margin-top: 20px;
+    margin-bottom: 15px;
+}
+
+.contact-form-container {
+    background: #fff;
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    border: 1px solid rgba(0,0,0,0.05);
+}
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+.form-group {
+    margin-bottom: 20px;
+}
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: var(--secondary-color);
+}
+.form-group input, .form-group textarea {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #E2E8F0;
+    border-radius: 10px;
+    font-family: var(--font-main);
+    font-size: 1rem;
+    transition: var(--transition);
+    background: var(--bg-light);
+}
+.form-group input:focus, .form-group textarea:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    background: #fff;
+    box-shadow: 0 0 0 4px rgba(30,120,255,0.1);
+}
+.btn-submit {
+    width: 100%;
+    padding: 15px;
+    font-size: 1.1rem;
+    border: none;
+}
+
 /* Responsive */
 @media (max-width: 992px) {
     .hero {
@@ -1365,4 +1549,8 @@ footer {
     .cta-content p { font-size: 1.1rem; }
     .cta-buttons { flex-direction: column; align-items: stretch; }
     .cta-buttons a { text-align: center; }
+    
+    .portfolio-grid { grid-template-columns: 1fr; }
+    .contact-wrapper { grid-template-columns: 1fr; }
+    .form-row { grid-template-columns: 1fr; }
 }
