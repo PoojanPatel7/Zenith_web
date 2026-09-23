@@ -194,53 +194,33 @@ document.addEventListener('DOMContentLoaded', () => {
     const formMessage = document.getElementById('formMessage');
 
     if (contactForm) {
-        contactForm.addEventListener('submit', async (e) => {
+        contactForm.addEventListener('submit', (e) => {
             e.preventDefault();
             
             // Collect form data
             const formData = new FormData(contactForm);
-            const data = Object.fromEntries(formData.entries());
+            const name = formData.get('name');
+            const email = formData.get('email');
+            const subject = formData.get('subject');
+            const message = formData.get('message');
             
-            // Example of showing success message immediately
+            // Construct the mailto link
+            const mailtoLink = `mailto:zeniithdigitalworks@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent("From: " + name + " (" + email + ")\n\n" + message)}`;
+            
+            // Open the default email client
+            window.location.href = mailtoLink;
+            
             contactForm.reset();
-            formMessage.textContent = "Thank you! Your message has been sent successfully.";
+            formMessage.textContent = "Opening your email client...";
             formMessage.style.display = 'block';
-            formMessage.style.backgroundColor = '#d4edda';
-            formMessage.style.color = '#155724';
-            formMessage.style.border = '1px solid #c3e6cb';
+            formMessage.style.backgroundColor = '#d1ecf1';
+            formMessage.style.color = '#0c5460';
+            formMessage.style.border = '1px solid #bee5eb';
             
             // Hide message after 5 seconds
             setTimeout(() => {
                 formMessage.style.display = 'none';
             }, 5000);
-            
-            /* If you want to actually submit to Formspree via AJAX:
-            try {
-                const response = await fetch(contactForm.action, {
-                    method: 'POST',
-                    body: formData,
-                    headers: { 'Accept': 'application/json' }
-                });
-                
-                if (response.ok) {
-                    contactForm.reset();
-                    formMessage.textContent = "Thanks for contacting us! We will get back to you soon.";
-                    formMessage.style.display = 'block';
-                    formMessage.style.backgroundColor = '#d4edda';
-                    formMessage.style.color = '#155724';
-                } else {
-                    formMessage.textContent = "Oops! There was a problem submitting your form";
-                    formMessage.style.display = 'block';
-                    formMessage.style.backgroundColor = '#f8d7da';
-                    formMessage.style.color = '#721c24';
-                }
-            } catch (error) {
-                formMessage.textContent = "Oops! There was a problem submitting your form";
-                formMessage.style.display = 'block';
-                formMessage.style.backgroundColor = '#f8d7da';
-                formMessage.style.color = '#721c24';
-            }
-            */
         });
     }
 });
